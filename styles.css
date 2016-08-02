@@ -1,1 +1,1 @@
-.home-page{background:#263564}
+.main-navigation{background:rgba(15,21,58,.9)}.headroom{top:0;left:0;right:0;zIndex:1}.headroom--unfixed{position:relative;transform:translateY(0)}.headroom--scrolled{transition:transform .2s ease-in-out}.headroom--unpinned{position:fixed;transform:translateY(-100%)}.headroom--pinned{position:fixed;transform:translateY(0)}.full-screen-bg{position:fixed;width:100%;height:100%;top:0;left:0;background-size:cover;z-index:-1;background-position:50%}.home-page{color:#fff}

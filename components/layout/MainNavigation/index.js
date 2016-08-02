@@ -1,6 +1,6 @@
 import React from 'react'
-import { Container } from 'react-responsive-grid'
 import { Link } from 'react-router'
+import { Grid, Col } from 'react-bootstrap';
 import { prefixLink } from 'gatsby-helpers'
 import Headroom from 'react-headroom'
 
@@ -13,11 +13,16 @@ export default class MainNavigation extends React.Component {
         return (
             <Headroom disableInlineStyles>
                 <div className="main-navigation">
-                    <Container>
-                        <Link to={prefixLink('/')}>
-                            <Logo/>
-                        </Link>
-                    </Container>
+                    <Grid>
+                        <Col md={4} > </Col>
+                        <Col md={4} className='text-center'>
+                            <Link to={prefixLink('/')}>
+                                <Logo/>
+                            </Link>
+                        </Col>
+                        <Col md={4} />
+
+                    </Grid>
                 </div>
             </Headroom>
         )

@@ -41,6 +41,7 @@
     "eslint-plugin-jsx-a11y": "1.5.3",
     "eslint-plugin-react": "^5.1.1",
     "gh-pages": "^0.11.0",
+    "image-webpack-loader": "^2.0.0",
     "null-loader": "^0.1.1",
     "postcss-loader": "^0.9.1",
     "react-transform-catch-errors": "^1.0.2",
@@ -57,7 +58,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-links && gh-pages -d public"
   }

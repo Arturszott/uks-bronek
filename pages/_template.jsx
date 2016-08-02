@@ -1,12 +1,13 @@
 import React from 'react'
 import MainNavigaiton from '../components/layout/MainNavigation';
+import Main from '../components/layout/Main'
 
 const Template = (props) => {
     return (
-        <div>
+        <Main>
             <MainNavigaiton />
             {props.children}
-        </div>
+        </Main>
     )
 }
 

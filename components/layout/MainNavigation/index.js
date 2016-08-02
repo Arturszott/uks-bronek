@@ -16,9 +16,7 @@ export default class MainNavigation extends React.Component {
                     <Grid>
                         <Col md={4} > </Col>
                         <Col md={4} className='text-center'>
-                            <Link to={prefixLink('/')}>
-                                <Logo/>
-                            </Link>
+                            <Logo/>
                         </Col>
                         <Col md={4} />
 

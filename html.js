@@ -30,6 +30,7 @@ module.exports = React.createClass({
             content="width=device-width, initial-scale=1.0 maximum-scale=1.0"
           />
           <title>{title}</title>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
           <link rel="shortcut icon" href={this.props.favicon} />
           {css}
         </head>

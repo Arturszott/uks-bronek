@@ -6,13 +6,17 @@ import Headroom from 'react-headroom'
 
 import './styles.scss'
 
+import Logo from '../../common/Logo';
+
 export default class MainNavigation extends React.Component {
     render () {
         return (
             <Headroom disableInlineStyles>
                 <div className="main-navigation">
                     <Container>
-                        <Link to={prefixLink('/')}> UKS Bronek </Link>
+                        <Link to={prefixLink('/')}>
+                            <Logo/>
+                        </Link>
                     </Container>
                 </div>
             </Headroom>

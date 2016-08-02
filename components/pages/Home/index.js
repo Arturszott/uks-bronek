@@ -15,18 +15,10 @@ export default class HomePage extends React.Component {
             <div className='home-page'>
                 <FullScreenBackground url={backgroundUrl}/>
                 <Container>
-                    <h1>
-                        Hi people
-                    </h1>
-                    <p>Welcome to your new Gatsby site</p>
-                    <h2>Below are some pages showing different capabilities built-in to Gatsby</h2>
-                    <h3>Supported file types</h3>
-                    <ul>
-                        <li>
-                            <Link to={prefixLink('/react/')}>JSX (React components)</Link>
-                        </li>
-                    </ul>
-                    <h3>Supported CSS processors</h3>
+                    <div className="dialog">
+                        <span className="dialog-line">Co jest najważniejsze w zagrywce? Wyskok, uderzenie?</span>
+                        <span className="dialog-line">Przebić piłkę na drugą stronę</span>
+                    </div>
                 </Container>
             </div>
         )

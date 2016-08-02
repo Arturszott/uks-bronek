@@ -21,6 +21,7 @@
     "markdown-it-sub": "^1.0.0",
     "object-assign": "^4.1.0",
     "react": "^15.3.0",
+    "react-bootstrap": "^0.30.1",
     "react-document-title": "^2.0.1",
     "react-dom": "^15.3.0",
     "react-headroom": "^2.1.2",

@@ -1,5 +1,5 @@
 import React from 'react'
-import './example.scss'
+import './home.scss'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 

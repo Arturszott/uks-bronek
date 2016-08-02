@@ -1,5 +1,6 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
+import './home.scss'
 import { config } from 'config'
 
 export default class ReactComponent extends React.Component {

@@ -1,5 +1,5 @@
-exports.modifyWebpackConfig = function(config, env) {
+exports.modifyWebpackConfig = function(config) {
     config._config.output.publicPath = '';
 
-    return config
+    return config;
 }

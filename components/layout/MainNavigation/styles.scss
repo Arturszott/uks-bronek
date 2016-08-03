@@ -1,5 +1,18 @@
 .main-navigation {
-  background: rgba(6, 11, 39, 0.9);
+  background: rgba(6, 11, 39, 0.6);
+
+  .navigation-link {
+    display: inline-block;
+    font-family: 'Museo Slab';
+    color: #74c6ff;
+    text-transform: uppercase;
+    padding: 20px;
+    font-size: 13px;
+
+    .text {
+      border-bottom: 2px solid #74c6ff;
+    }
+  }
 }
 
 .headroom {

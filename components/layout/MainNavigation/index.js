@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import { Grid, Col } from 'react-bootstrap';
+import { Grid, Col, Row } from 'react-bootstrap';
 import { prefixLink } from 'gatsby-helpers'
 import Headroom from 'react-headroom'
 
@@ -14,12 +14,39 @@ export default class MainNavigation extends React.Component {
             <Headroom disableInlineStyles>
                 <div className="main-navigation">
                     <Grid>
-                        <Col md={4} > </Col>
-                        <Col md={4} className='text-center'>
-                            <Logo/>
-                        </Col>
-                        <Col md={4} />
-
+                        <Row>
+                            <Col xs={4} className='text-center'>
+                                <Row>
+                                    <Col xs={6} >
+                                        <span className="navigation-link">
+                                            <span className="text">Zespoły</span>
+                                        </span>
+                                    </Col>
+                                    <Col xs={6} >
+                                        <span className="navigation-link">
+                                            <span className="text">Kadra</span>
+                                        </span>
+                                    </Col>
+                                </Row>
+                            </Col>
+                            <Col xs={4} className='text-center'>
+                                <Logo/>
+                            </Col>
+                            <Col xs={4} className='text-center'>
+                                <Row>
+                                    <Col xs={6} >
+                                        <span className="navigation-link">
+                                            <span className="text">Zdjęcia</span>
+                                        </span>
+                                    </Col>
+                                    <Col xs={6} >
+                                        <span className="navigation-link">
+                                            <span className="text">Kontakt</span>
+                                        </span>
+                                    </Col>
+                                </Row>
+                            </Col>
+                        </Row>
                     </Grid>
                 </div>
             </Headroom>

@@ -16,11 +16,16 @@
 }
 
 .headroom {
-  top: 80px;
+  top: 70px;
   left: 0;
   right: 0;
   zIndex: 1;
 }
+
+.headroom-wrapper {
+  height:0 !important;
+}
+
 .headroom--unfixed {
   position: relative;
   transform: translateY(0);

@@ -1,6 +1,19 @@
-.home-page {
-  color: white;
-  padding-top: 200px;
-  padding-bottom: 200px;;
-}
+.teams-page {
+  position: relative;
 
+  color: dimgray;
+  padding-top: 50px;
+  padding-bottom: 200px;
+
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: #e4e4e4;
+    width: 33%;
+    height: 100%;
+  }
+}

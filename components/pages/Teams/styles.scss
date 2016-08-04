@@ -1,3 +1,5 @@
+@import '~variables';
+
 .teams-page {
   position: relative;
 
@@ -12,8 +14,12 @@
     left: 0;
     top: 0;
     z-index: -1;
-    background: #e4e4e4;
+    background: $secondary-light-bg;
     width: 33%;
     height: 100%;
+  }
+
+  ul {
+    padding: 0;
   }
 }

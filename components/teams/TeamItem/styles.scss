@@ -1,3 +1,49 @@
-.team-item {
+@import '~variables';
 
+$bullet-size: 45px;
+
+.team-item {
+  margin-bottom: 10px;
+
+  font-size: 22px;
+
+  cursor: pointer;
+  color: $dark-blue;
+  list-style: none;
+  position: relative;
+
+  &.is-active {
+    color: $light-blue;
+    cursor: default;
+
+    &:before {
+      background-position: $bullet-size;
+    }
+  }
+
+  &:before {
+    content: '';
+    margin-right: (10px * 0.82);
+    width: $bullet-size;
+    height: $bullet-size;
+    transform: scale(0.82);
+
+    overflow: hidden;
+    display: inline-block;
+
+    background-image: url('bullet.png');
+  }
+
+  .content {
+    display: inline-block;
+  }
+
+  .name {
+    display: block;
+  }
+
+  .age {
+    font-size: 12px;
+    display: block;
+  }
 }

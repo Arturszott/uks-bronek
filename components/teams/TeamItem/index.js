@@ -1,11 +1,18 @@
 import React from 'react'
 
+import { Row, Col } from 'react-bootstrap';
+
 import './styles.scss'
 
-export default function DateTimeHeader() {
-    return (
-        <header className='date-time-header'>
+export default function TeamItem({name, active, age, onClick}) {
+    const activeClass = active ? 'is-active' : '';
 
-        </header>
+    return (
+        <li className={`team-item ${activeClass}`} onClick={onClick}>
+            <span className="content">
+                <span className='name'>{name}</span>
+                <span className='age'>{age} lat</span>
+            </span>
+        </li>
     )
 }

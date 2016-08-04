@@ -8,28 +8,7 @@ import DateTimeHeader from '../../teams/DateTimeHeader';
 
 import './styles.scss'
 
-const teams = [
-    {
-        name: 'Minisiatkówka',
-        age: '6-10'
-    },
-    {
-        name: 'Młodzicy',
-        age: '11-13'
-    },
-    {
-        name: 'Kadeci',
-        age: '14-16'
-    },
-    {
-        name: 'Juniorzy',
-        age: '17-24'
-    },
-    {
-        name: 'Seniorzy',
-        age: '25-40'
-    }
-];
+import teamsData from './data';
 
 export default class TeamsPage extends React.Component {
     constructor() {
@@ -45,6 +24,8 @@ export default class TeamsPage extends React.Component {
     }
 
     render () {
+        const pickedTeamData = teamsData[this.state.pickedTeam];
+
         return (
             <div className='teams-page page'>
                 <Grid fluid>
@@ -58,7 +39,7 @@ export default class TeamsPage extends React.Component {
                                 >
                                     <h2>Zespoły</h2>
                                     <ul>
-                                        {teams.map((teamProps, i) => {
+                                        {teamsData.map((teamProps, i) => {
                                             return (
                                                 <TeamItem key={i} {...teamProps}
                                                           active={this.state.pickedTeam === i}
@@ -71,7 +52,7 @@ export default class TeamsPage extends React.Component {
                             </Row>
                         </Col>
                         <Col xs={8} >
-                            <DateTimeHeader />
+                            <DateTimeHeader {...pickedTeamData}/>
                         </Col>
                     </Row>
                 </Grid>

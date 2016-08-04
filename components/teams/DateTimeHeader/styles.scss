@@ -1,3 +1,38 @@
+@import '~variables';
+
 .date-time-header {
 
+  .days-line {
+    @include font-headline;
+
+    padding-left: 0;
+    font-size: 17px;
+    line-height: 30px;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      background: $dark-blue;
+      height: 2px;
+      margin-top: 2px;
+    }
+  }
+  .hours-field {
+    @include font-headline;
+
+    padding: 7px;
+    font-size: 15px;
+    font-weight:bold;
+    background-color: $light-blue;
+    text-align: center;
+    color: white;
+  }
+
+  .teamName {
+    color: $light-blue;
+    display: block;
+    font-size: 16px;
+    margin-top: 5px;
+  }
 }

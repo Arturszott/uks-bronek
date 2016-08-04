@@ -5,3 +5,7 @@ $dark-blue: #1f2639;
 
 $medium-screen: 'max-width: 992px';
 $large-screen: 'min-width: 1200px';
+
+@mixin font-headline() {
+  font-family: 'Museo Slab';
+}

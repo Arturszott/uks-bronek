@@ -2,10 +2,15 @@ import React from 'react'
 
 import './styles.scss'
 
-export default function DateTimeHeader() {
+export default function TeamDescription({ headline, paragraph }) {
     return (
-        <div className='team-description'>
-
-        </div>
+        <article className='team-description'>
+            <h1>
+                {headline}
+            </h1>
+            <p>
+                {paragraph}
+            </p>
+        </article>
     )
 }

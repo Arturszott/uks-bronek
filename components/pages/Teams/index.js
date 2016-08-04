@@ -5,6 +5,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 import TeamItem from '../../teams/TeamItem';
 import DateTimeHeader from '../../teams/DateTimeHeader';
+import TeamDescription from '../../teams/TeamDescription';
 
 import './styles.scss'
 
@@ -53,6 +54,10 @@ export default class TeamsPage extends React.Component {
                         </Col>
                         <Col xs={8} >
                             <DateTimeHeader {...pickedTeamData}/>
+                            <TeamDescription
+                                headline={pickedTeamData.description.headline}
+                                paragraph={pickedTeamData.description.paragraph}
+                            />
                         </Col>
                     </Row>
                 </Grid>

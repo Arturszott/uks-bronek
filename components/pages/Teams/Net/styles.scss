@@ -1,0 +1,15 @@
+@import '~variables';
+
+.team-net {
+  overflow: hidden;
+  position: relative;
+
+  .bottom-line {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 30px;
+    border-bottom: 3px solid $dark-blue;
+
+  }
+}

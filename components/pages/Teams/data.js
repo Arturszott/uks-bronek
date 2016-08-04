@@ -1,3 +1,5 @@
+import React from 'react'
+
 const teams = [
     {
         name: 'Minisiatkówka',
@@ -25,7 +27,7 @@ const teams = [
         hours: '19:30 - 21:00',
         days: 'Soboty i Wielkanoce',
         description: {
-            headline: 'Pobiegali? To teraz prawdziwa siatkówka.',
+            headline: <span>Pobiegali? <br/>To teraz prawdziwa siatkówka.</span>,
             paragraph: 'W nastepnym etapie szkolenia zawodniczego oprocz rozwijania sprawnosci ogolnej wprowadza sie elementy sprawnosci specjalnej - techniki i taktyki gry. \n\n Na tym etapie szkolenia wprowadzamy zawodnikow do rywalizacji sportowej przystępując o rozgrywek ligowych w kategori młodzika.'
         }
     },
@@ -35,7 +37,7 @@ const teams = [
         hours: '21:30 - 23:00',
         days: 'Poniedziałki i Walentynki',
         description: {
-            headline: 'Szkolna miłośc się skończyła. Miłość do siatkowki nie umiera nigdy.',
+            headline: <span>Szkolna miłośc się skończyła? <br/>Miłość do siatkowki nie umiera nigdy.</span>,
             paragraph: 'W nastepnym etapie szkolenia zawodniczego oprocz rozwijania sprawnosci ogolnej wprowadza sie elementy sprawnosci specjalnej - techniki i taktyki gry. \n\n Na tym etapie szkolenia wprowadzamy zawodnikow do rywalizacji sportowej przystępując o rozgrywek ligowych w kategori młodzika.'
         }
     },

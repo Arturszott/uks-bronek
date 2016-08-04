@@ -1,0 +1,15 @@
+@import '~variables';
+
+.team-description {
+  margin-top: 60px;
+
+  .headline {
+    color: $dark-blue;
+  }
+
+  .paragraph {
+    margin-top: 30px;
+    font-size: 13px;
+    line-height: 1.8em;
+  }
+}

@@ -4,6 +4,7 @@ import { config } from 'config'
 
 import HomePage from '../components/pages/Home';
 import TeamsPage from '../components/pages/Teams';
+import StaffPage from '../components/pages/Staff';
 
 export default class Index extends React.Component {
     render () {
@@ -12,6 +13,7 @@ export default class Index extends React.Component {
                 <div>
                     <HomePage />
                     <TeamsPage />
+                    <StaffPage />
                 </div>
             </DocumentTitle>
         )

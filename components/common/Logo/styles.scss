@@ -1,5 +1,11 @@
+@import '~variables';
+
 .logo {
   max-height: 140px;
+  background-color: rgba(6, 11, 39, 1);
+  border-radius: 50%;
+
+  transition: all 300ms ease;
 }
 
 .logo-wrapper {
@@ -9,6 +15,6 @@
 
 .headroom--unpinned {
   .logo {
-    //transform: scaleX(0.8) scaleY(0.8) translateY(30%);
+    transform: scaleX(0.8) scaleY(0.8) translateY(0%);
   }
 }

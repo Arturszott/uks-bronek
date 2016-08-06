@@ -15,10 +15,13 @@ module.exports = React.createClass({
     const title = DocumentTitle.rewind()
 
     let css
+    let bootstrap
 
     if (process.env.NODE_ENV === 'production') {
       css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
     }
+
+    bootstrap = <style dangerouslySetInnerHTML={{ __html: require('!raw!./assets/bootstrap.min.css') }} />
 
     return (
       <html lang="en">
@@ -33,6 +36,7 @@ module.exports = React.createClass({
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
           <link rel="shortcut icon" href={this.props.favicon} />
           {css}
+          {bootstrap}
         </head>
         <body>
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />

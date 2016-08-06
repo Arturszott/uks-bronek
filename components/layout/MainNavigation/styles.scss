@@ -1,5 +1,6 @@
 .main-navigation {
-  background: rgba(6, 11, 39, 0.6);
+  background: rgba(6, 11, 39, 0.95);
+  transition: all 400ms ease;
 
   .navigation-link {
     display: inline-block;
@@ -16,7 +17,7 @@
 }
 
 .headroom {
-  top: 70px;
+  top: 60px;
   left: 0;
   right: 0;
   z-index: 100;
@@ -32,6 +33,10 @@
 }
 .headroom--scrolled {
   transition: transform 200ms ease-in-out;
+
+  .main-navigation {
+    box-shadow: 0 -47px 35px 15px rgba(6, 11, 39, 0.88);
+  }
 }
 .headroom--unpinned {
   position: fixed;
@@ -41,3 +46,5 @@
   position: fixed;
   transform: translateY(0%);
 }
+
+.headroom--pinned.headroom--scrolled {}

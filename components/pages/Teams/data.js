@@ -9,6 +9,10 @@ const teams = [
         description: {
             headline: 'Szkolenie podstawowe zaczyna się od zajęć mini siatkówki w formie zabawowej',
             paragraph: 'W nastepnym etapie szkolenia zawodniczego oprocz rozwijania sprawnosci ogolnej wprowadza sie elementy sprawnosci specjalnej - techniki i taktyki gry. \n\n Na tym etapie szkolenia wprowadzamy zawodnikow do rywalizacji sportowej przystępując o rozgrywek ligowych w kategori młodzika.'
+        },
+        netSizing: {
+            className: 'small',
+            unit: '1.5m'
         }
     },
     {
@@ -19,6 +23,10 @@ const teams = [
         description: {
             headline: 'Koniec zabawy. Pora grać.',
             paragraph: 'W nastepnym etapie szkolenia zawodniczego oprocz rozwijania sprawnosci ogolnej wprowadza sie elementy sprawnosci specjalnej - techniki i taktyki gry. \n\n Na tym etapie szkolenia wprowadzamy zawodnikow do rywalizacji sportowej przystępując o rozgrywek ligowych w kategori młodzika.'
+        },
+        netSizing: {
+            className: 'medium',
+            unit: '1.6m'
         }
     },
     {
@@ -29,6 +37,10 @@ const teams = [
         description: {
             headline: <span>Pobiegali? <br/>To teraz prawdziwa siatkówka.</span>,
             paragraph: 'W nastepnym etapie szkolenia zawodniczego oprocz rozwijania sprawnosci ogolnej wprowadza sie elementy sprawnosci specjalnej - techniki i taktyki gry. \n\n Na tym etapie szkolenia wprowadzamy zawodnikow do rywalizacji sportowej przystępując o rozgrywek ligowych w kategori młodzika.'
+        },
+        netSizing: {
+            className: 'big',
+            unit: '1.7m'
         }
     },
     {
@@ -39,6 +51,10 @@ const teams = [
         description: {
             headline: <span>Szkolna miłośc się skończyła? <br/>Miłość do siatkowki nie umiera nigdy.</span>,
             paragraph: 'W nastepnym etapie szkolenia zawodniczego oprocz rozwijania sprawnosci ogolnej wprowadza sie elementy sprawnosci specjalnej - techniki i taktyki gry. \n\n Na tym etapie szkolenia wprowadzamy zawodnikow do rywalizacji sportowej przystępując o rozgrywek ligowych w kategori młodzika.'
+        },
+        netSizing: {
+            className: 'large',
+            unit: '2m'
         }
     },
     {
@@ -49,6 +65,10 @@ const teams = [
         description: {
             headline: 'Człowiek wolniej się starzeje grając w siatkówkę',
             paragraph: 'W nastepnym etapie szkolenia zawodniczego oprocz rozwijania sprawnosci ogolnej wprowadza sie elementy sprawnosci specjalnej - techniki i taktyki gry. \n\n Na tym etapie szkolenia wprowadzamy zawodnikow do rywalizacji sportowej przystępując o rozgrywek ligowych w kategori młodzika.'
+        },
+        netSizing: {
+            className: 'extra-large',
+            unit: '2.3m'
         }
     }
 ];

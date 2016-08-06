@@ -32,7 +32,7 @@ export default class TeamsPage extends React.Component {
             <div className='teams-page page'>
                 <Grid fluid>
                     <Row>
-                        <Net>
+                        <Net sizing={pickedTeamData.netSizing} >
                             <Col xs={4} >
                                 <Row>
                                     <Col

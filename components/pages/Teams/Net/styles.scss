@@ -1,6 +1,6 @@
 @import '~variables';
 
-$net-color: $light-blue;
+$net-color: lighten($light-blue, 30);
 
 .team-net {
   position: relative;
@@ -19,7 +19,7 @@ $net-color: $light-blue;
   }
 
   .net-pole {
-    background: $light-blue;
+    background: lighten($light-blue, 10);
     width: 5px;
     right: $net-width - $net-line-width;
     bottom: 0;
@@ -29,6 +29,7 @@ $net-color: $light-blue;
 
   // thanks Lea Verou! http://lea.verou.me/css3patterns/#blueprint-grid
   .net-pattern {
+    transition: transform 0.6s ease;
     position: absolute;
     top: 0;
     right: 0;
@@ -37,10 +38,44 @@ $net-color: $light-blue;
     background-image: linear-gradient($net-color $net-line-width, transparent $net-line-width),
     linear-gradient(90deg, $net-color $net-line-width, transparent $net-line-width);
     background-size: $net-size $net-size, $net-size $net-size;
+
+    &.large {
+      transform: translateY(0%);
+    }
+
+    &.big {
+      transform: translateY(10%);
+    }
+
+    &.medium {
+      transform: translateY(20%);
+    }
+
+    &.small {
+      transform: translateY(30%);
+    }
   }
 
+
+
   .net-height-text {
-    transform: rotate(90deg);
+    position: absolute;
+    display: inline-block;
+    transform: rotate(-90deg) translateX(100%);
+    letter-spacing: 2px;
+    transform-origin: 100% 0;
+
+    right: 120px;
+    bottom: 30px;
+
+    color: lighten($light-blue, 10);
+
+    .unit {
+      display: inline-block;
+      margin-left: 10px;
+      font-weight: bold;
+      color: $dark-blue;
+    }
   }
 }
 

@@ -1,8 +1,14 @@
 @import '~variables';
 
+$net-color: $light-blue;
+
 .team-net {
-  overflow: hidden;
   position: relative;
+
+  $net-width: 80px;
+  $net-rows: 8;
+  $net-size: 25px;
+  $net-line-width: 2px;
 
   .bottom-line {
     position: absolute;
@@ -10,6 +16,31 @@
     bottom: 0;
     left: 30px;
     border-bottom: 3px solid $dark-blue;
+  }
 
+  .net-pole {
+    background: $light-blue;
+    width: 5px;
+    right: $net-width - $net-line-width;
+    bottom: 0;
+    position: absolute;
+    height: calc(100% + 20px);
+  }
+
+  // thanks Lea Verou! http://lea.verou.me/css3patterns/#blueprint-grid
+  .net-pattern {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: $net-width;
+    height: ($net-rows * $net-size + $net-line-width);
+    background-image: linear-gradient($net-color $net-line-width, transparent $net-line-width),
+    linear-gradient(90deg, $net-color $net-line-width, transparent $net-line-width);
+    background-size: $net-size $net-size, $net-size $net-size;
+  }
+
+  .net-height-text {
+    transform: rotate(90deg);
   }
 }
+

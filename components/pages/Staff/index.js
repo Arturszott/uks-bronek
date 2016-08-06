@@ -8,6 +8,7 @@ import data from './data'
 
 import StaffPicker from './StaffPicker';
 import CoachInfo from './CoachInfo';
+import CoachPhoto from './CoachPhoto';
 
 export default class StaffPage extends React.Component {
     constructor() {
@@ -35,12 +36,16 @@ export default class StaffPage extends React.Component {
                         <Col sm={8}>
                             <h3>Kadra</h3>
                             <Row>
-                                <StaffPicker coaches={data} selectedPersonIndex={selectedPersonIndex} onClick={this.selectCoach.bind(this)}/>
+                                <StaffPicker
+                                    coaches={data}
+                                    selectedPersonIndex={selectedPersonIndex}
+                                    onClick={this.selectCoach.bind(this)}
+                                />
                                 <CoachInfo {...coachData}/>
                             </Row>
                         </Col>
                         <Col sm={4}>
-
+                            <CoachPhoto {...coachData}/>
                         </Col>
                     </Row>
                 </Grid>

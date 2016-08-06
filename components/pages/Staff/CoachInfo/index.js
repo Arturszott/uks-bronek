@@ -13,9 +13,9 @@ export default function CoachInfo({ name, description }) {
             <Grid fluid>
                 <Row>
                     <Col sm={8}>
-                        <div className="coach-description">
+                        <article className="coach-description">
                             {description}
-                        </div>
+                        </article>
                     </Col>
                     <Col sm={4}>
 

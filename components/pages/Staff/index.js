@@ -17,6 +17,13 @@ export default class StaffPage extends React.Component {
             selectedPersonIndex: 0
         }
     }
+
+    selectCoach(i) {
+        this.setState({
+            selectedPersonIndex: i
+        })
+    }
+
     render () {
         const { selectedPersonIndex } = this.state;
         const coachData = data[selectedPersonIndex];
@@ -24,16 +31,18 @@ export default class StaffPage extends React.Component {
         return (
             <div className='staff-page page'>
                 <Grid>
-                    <Col sm={8}>
-                        <h3>Kadra</h3>
-                        <Row>
-                            <StaffPicker coaches={data} selectedPersonIndex={selectedPersonIndex}/>
-                            <CoachInfo {...coachData}/>
-                        </Row>
-                    </Col>
-                    <Col sm={4}>
+                    <Row>
+                        <Col sm={8}>
+                            <h3>Kadra</h3>
+                            <Row>
+                                <StaffPicker coaches={data} selectedPersonIndex={selectedPersonIndex} onClick={this.selectCoach.bind(this)}/>
+                                <CoachInfo {...coachData}/>
+                            </Row>
+                        </Col>
+                        <Col sm={4}>
 
-                    </Col>
+                        </Col>
+                    </Row>
                 </Grid>
             </div>
         )

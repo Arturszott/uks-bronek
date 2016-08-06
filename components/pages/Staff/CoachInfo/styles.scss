@@ -1,7 +1,22 @@
 @import '~variables';
 
-.staff-picker {
-  .coach-name {
+.coach-info {
+  position: relative;
+  background: white;
 
+  .coach-description {
+    color: $dark-blue;
+  }
+
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    background: $secondary-light-bg;
+    width: 33%;
+    height: 100%;
   }
 }

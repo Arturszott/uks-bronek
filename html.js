@@ -34,6 +34,7 @@ module.exports = React.createClass({
           />
           <title>{title}</title>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
+          <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'/>
           <link rel="shortcut icon" href={this.props.favicon} />
           {css}
           {bootstrap}

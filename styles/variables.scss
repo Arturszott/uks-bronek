@@ -8,5 +8,9 @@ $medium-screen: 'max-width: 992px';
 $large-screen: 'min-width: 1200px';
 
 @mixin font-headline() {
-  font-family: 'Museo Slab';
+  font-family: 'Museo Slab', serif;
+}
+
+@mixin font-normal() {
+  font-family: 'Open Sans', sans-serif;
 }

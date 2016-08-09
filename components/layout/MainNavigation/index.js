@@ -36,7 +36,7 @@ export default class MainNavigation extends React.Component {
                                 <Row>
                                     <Col xs={6} >
                                         <span className="navigation-link">
-                                            <span className="text">Zdjęcia</span>
+                                            <span className="text">Patroni</span>
                                         </span>
                                     </Col>
                                     <Col xs={6} >

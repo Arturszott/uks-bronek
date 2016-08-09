@@ -40,7 +40,7 @@ export default class TeamsPage extends React.Component {
                                         sm={11} smOffset={1}
                                         xs={11} xsOffset={1}
                                     >
-                                        <h2>Zespoły</h2>
+                                        <h3>Zespoły</h3>
                                         <ul className='team-list'>
                                             {teamsData.map((teamProps, i) => {
                                                 return (

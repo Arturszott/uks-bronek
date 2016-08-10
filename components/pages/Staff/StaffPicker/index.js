@@ -6,14 +6,24 @@ import './styles.scss'
 
 export default function StaffPicker({coaches, selectedPersonIndex, onClick}) {
     return (
-        <ul className="staff-picker">
-            {coaches.map((coach, i) => {
-                return (
-                    <li key={i} className={`coach-name ${selectedPersonIndex === i ? 'is-active' : ''}`} onClick={onClick.bind(null, i)}>
-                        {coach.name}
-                    </li>
-                );
-            })}
-        </ul>
+        <div>
+            <Col xsHidden smHidden>
+                <ul className="staff-picker">
+                    {coaches.map((coach, i) => {
+                        const nameParts = coach.name.split(' ');
+
+                        return (
+                            <li key={i} className={`coach-name ${selectedPersonIndex === i ? 'is-active' : ''}`} onClick={onClick.bind(null, i)}>
+                                <span className='name'>{nameParts[0]}</span>
+                                <span className='surname'>{nameParts[1]}</span>
+                            </li>
+                        );
+                    })}
+                </ul>
+            </Col>
+            <Col mdHidden lgHidden >
+                MOBILE PICKER
+            </Col>
+        </div>
     )
 }

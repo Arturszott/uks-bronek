@@ -33,5 +33,9 @@ export default [
     {
         name: 'Dariusz Bryła',
         description: 'Niewysoki, ale wariat'
-    }
+    },
+    {
+        name: 'Kamil Benedyktowicz',
+        description: 'Będą z niego ludzie'
+    },
 ]

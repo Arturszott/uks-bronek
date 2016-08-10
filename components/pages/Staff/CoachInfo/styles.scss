@@ -4,16 +4,18 @@
   position: relative;
   background: white;
 
-  &:before {
-    display: block;
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 0;
-    background: $secondary-light-bg;
-    width: 33%;
-    height: 100%;
+  @media #{$lg-min} {
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 0;
+      background: $secondary-light-bg;
+      width: 33%;
+      height: 100%;
+    }
   }
 
   .coach-description {

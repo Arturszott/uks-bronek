@@ -34,7 +34,9 @@ export default class StaffPage extends React.Component {
                 <Grid>
                     <Row>
                         <Col sm={8}>
-                            <h3>Kadra</h3>
+                            <Row>
+                                <h3>Kadra</h3>
+                            </Row>
                             <Row>
                                 <StaffPicker
                                     coaches={data}

@@ -12,12 +12,12 @@ export default function CoachInfo({ name, description }) {
             </div>
             <Grid fluid>
                 <Row>
-                    <Col sm={8}>
+                    <Col lg={8} sm={12}>
                         <article className="coach-description">
                             {description}
                         </article>
                     </Col>
-                    <Col sm={4}>
+                    <Col lg={8} sm={12}>
 
                     </Col>
                 </Row>

@@ -56,7 +56,7 @@ export default class TeamsPage extends React.Component {
                             </Col>
                             <Col xs={8} >
                                 <Grid fluid>
-                                    <Col sm={10} xs={12}>
+                                    <Col sm={8} xs={12}>
                                         <DateTimeHeader {...pickedTeamData}/>
                                         <TeamDescription
                                             headline={pickedTeamData.description.headline}

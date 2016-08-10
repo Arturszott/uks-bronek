@@ -6,6 +6,7 @@ import HomePage from '../components/pages/Home';
 import TeamsPage from '../components/pages/Teams';
 import StaffPage from '../components/pages/Staff';
 import SupportersPage from '../components/pages/Supporters';
+import ContactPage from '../components/pages/Contact';
 
 export default class Index extends React.Component {
     render () {
@@ -16,6 +17,7 @@ export default class Index extends React.Component {
                     <TeamsPage />
                     <StaffPage />
                     <SupportersPage />
+                    <ContactPage />
                 </div>
             </DocumentTitle>
         )

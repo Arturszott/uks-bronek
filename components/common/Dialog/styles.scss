@@ -1,5 +1,8 @@
+@import '~variables';
+
 .dialog {
-  font-family: 'Museo Slab';
+  @include font-headline();
+
   font-size: 36px;
   margin: 0 20px;
   margin-top: 50px;
@@ -16,7 +19,7 @@
     background: rgba(black, 0.2);
 
     strong {
-      color: #ff1f31;
+      color: $red;
     }
   }
 

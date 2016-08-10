@@ -4,12 +4,13 @@
   position: relative;
   overflow: hidden;
 
-  color: dimgray;
+  color: $dark-blue;
   padding-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
 
   .team-list {
-    margin-top: 100px;
+    margin-top: 70px;
+    margin-bottom: 40px;
   }
 
   &:before {

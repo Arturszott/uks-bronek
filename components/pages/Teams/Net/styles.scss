@@ -1,6 +1,6 @@
 @import '~variables';
 
-$net-color: lighten($light-blue, 30);
+$net-color: $pale-blue;
 
 .team-net {
   position: relative;
@@ -19,8 +19,8 @@ $net-color: lighten($light-blue, 30);
   }
 
   .net-pole {
-    background: lighten($light-blue, 10);
-    width: 5px;
+    background: $net-color;
+    width: 10px;
     right: $net-width - $net-line-width;
     bottom: 0;
     position: absolute;
@@ -40,25 +40,24 @@ $net-color: lighten($light-blue, 30);
     background-size: $net-size $net-size, $net-size $net-size;
 
     &.large {
-      transform: translateY(0%);
-    }
-
-    &.big {
       transform: translateY(10%);
     }
 
-    &.medium {
+    &.big {
       transform: translateY(20%);
     }
 
-    &.small {
+    &.medium {
       transform: translateY(30%);
+    }
+
+    &.small {
+      transform: translateY(40%);
     }
   }
 
-
-
   .net-height-text {
+    @include font-headline();
     position: absolute;
     display: inline-block;
     transform: rotate(-90deg) translateX(100%);
@@ -66,7 +65,7 @@ $net-color: lighten($light-blue, 30);
     transform-origin: 100% 0;
 
     right: 120px;
-    bottom: 30px;
+    bottom: 100px;
 
     color: lighten($light-blue, 10);
 
@@ -74,7 +73,6 @@ $net-color: lighten($light-blue, 30);
       display: inline-block;
       margin-left: 10px;
       font-weight: bold;
-      color: $dark-blue;
     }
   }
 }

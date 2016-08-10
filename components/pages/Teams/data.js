@@ -7,7 +7,7 @@ const teams = [
         hours: '16:30 - 17:00',
         days: 'Wtorki i Czwartki',
         description: {
-            headline: 'Szkolenie podstawowe zaczyna się od zajęć mini siatkówki w formie zabawowej',
+            headline: 'Szkolenie podstawowe rozpoczyna się od zajęć mini siatkówki w formie zabawowej',
             paragraph: 'W nastepnym etapie szkolenia zawodniczego oprocz rozwijania sprawnosci ogolnej wprowadza sie elementy sprawnosci specjalnej - techniki i taktyki gry. \n\n Na tym etapie szkolenia wprowadzamy zawodnikow do rywalizacji sportowej przystępując o rozgrywek ligowych w kategori młodzika.'
         },
         netSizing: {

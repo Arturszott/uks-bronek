@@ -5,6 +5,7 @@
   .days-line {
     @include font-headline;
 
+    color: $dark-blue;
     padding-left: 0;
     font-size: 17px;
     line-height: 30px;
@@ -21,9 +22,8 @@
   .hours-field {
     @include font-headline;
 
-    padding: 7px;
-    font-size: 15px;
-    font-weight:bold;
+    padding: 6px;
+    font-size: 16px;
     background-color: $light-blue;
     text-align: center;
     color: white;

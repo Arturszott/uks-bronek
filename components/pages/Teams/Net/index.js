@@ -10,7 +10,7 @@ export default function Net({children, sizing}) {
             <Grid fluid>
                 <div className={`net-pattern ${sizing.className}`}></div>
                 <div className='net-pole'></div>
-                <span className="net-height-text">wysokość:<span className="unit">{sizing.unit}</span></span>
+                <span className="net-height-text">Wysokość siatki:<span className="unit">{sizing.unit}</span></span>
 
                 <Col xs={8} xsOffset={4}>
                     <div className='bottom-line' ></div>

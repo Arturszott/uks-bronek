@@ -7,7 +7,9 @@ $inactive-opacity: 0.3;
   margin-top: 10px;
   margin-bottom: 30px;
 
-  border-bottom: 2px solid rgba(255, 255, 255, $inactive-opacity);
+  .staff-list {
+    border-bottom: 2px solid rgba(255, 255, 255, $inactive-opacity);
+  }
 
   .coach-name {
     list-style: none;
@@ -36,6 +38,38 @@ $inactive-opacity: 0.3;
     &.is-active {
       opacity: 1;
       cursor: default;
+    }
+  }
+
+  .Select {
+    outline: none;
+
+    .Select-control {
+      background: $dark-blue;
+      font-size:18px;
+      border: none !important;
+
+      .Select-value-label {
+        color: white !important;
+        @include font-headline();
+      }
+    }
+    .Select-menu-outer {
+
+    }
+    .Select-arrow-zone {
+      background: white;
+      border-radius: 3px;
+      width: 40px;
+      padding-right: 0;
+    }
+    .Select-arrow {
+      border-top-color: $light-blue;
+      border-width: 8px 5px 0px;
+    }
+    .Select-option {
+      @include font-headline();
+      font-size: 18px;
     }
   }
 }

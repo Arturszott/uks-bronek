@@ -12,9 +12,9 @@ export default function StaffPicker({coaches, selectedPersonIndex, onClick, onCh
     const selectOptions = coaches.map(({name}, i) => ({ value: i, label: name }));
 
     return (
-        <div>
+        <div className="staff-picker">
             <DesktopOnly>
-                <ul className="staff-picker">
+                <ul className='staff-list'>
                     {coaches.map((coach, i) => {
                         const nameParts = coach.name.split(' ');
 
@@ -31,6 +31,8 @@ export default function StaffPicker({coaches, selectedPersonIndex, onClick, onCh
                 <Select
                     searchable={false}
                     clearable={false}
+                    autoBlur={false}
+                    onBlurResetsInput={false}
                     value={selectedPersonIndex}
                     options={selectOptions}
                     onChange={(option) => {onChange(option.value)}}

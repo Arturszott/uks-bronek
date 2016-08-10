@@ -14,7 +14,7 @@ export default class ContactPage extends React.Component {
             <div className='contact-page page'>
                 <Grid >
                     <Row>
-                        <Col sm={6}>
+                        <Col sm={6} class>
                             <h1 className='main-headline'>
                                 Gdzie trenujemy
                             </h1>
@@ -28,12 +28,19 @@ export default class ContactPage extends React.Component {
                                 </span>
                             </p>
                         </Col>
+                        <Col sm={6}>
+                            <a href="https://goo.gl/maps/Lejg5WFQwNC2" className="map-link" target='_blank'>
+                                Pokaż miejsce na mapie
+                            </a>
+                        </Col>
                     </Row>
                 </Grid>
-                <img src={schoolImageUrl}
-                     alt="II Liceum Ogólnokształcącego im. Władysława Broniewskiego w Koszalinie"
-                     className='school-image'
-                />
+                <div className="text-center">
+                    <img src={schoolImageUrl}
+                         alt="II Liceum Ogólnokształcącego im. Władysława Broniewskiego w Koszalinie"
+                         className='school-image'
+                    />
+                </div>
             </div>
         )
     }

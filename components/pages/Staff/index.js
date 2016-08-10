@@ -40,6 +40,7 @@ export default class StaffPage extends React.Component {
                                     coaches={data}
                                     selectedPersonIndex={selectedPersonIndex}
                                     onClick={this.selectCoach.bind(this)}
+                                    onChange={this.selectCoach.bind(this)}
                                 />
                                 <CoachInfo {...coachData}/>
                             </Row>

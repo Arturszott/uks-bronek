@@ -1,13 +1,19 @@
 import React from 'react'
 
 import { Row, Col } from 'react-bootstrap';
+import Select from 'react-select';
 
 import './styles.scss'
+import 'react-select/dist/react-select.css';
 
-export default function StaffPicker({coaches, selectedPersonIndex, onClick}) {
+import { MobileOnly, DesktopOnly } from '../../../common/responsive';
+
+export default function StaffPicker({coaches, selectedPersonIndex, onClick, onChange}) {
+    const selectOptions = coaches.map(({name}, i) => ({ value: i, label: name }));
+
     return (
         <div>
-            <Col xsHidden smHidden>
+            <DesktopOnly>
                 <ul className="staff-picker">
                     {coaches.map((coach, i) => {
                         const nameParts = coach.name.split(' ');
@@ -20,10 +26,16 @@ export default function StaffPicker({coaches, selectedPersonIndex, onClick}) {
                         );
                     })}
                 </ul>
-            </Col>
-            <Col mdHidden lgHidden >
-                MOBILE PICKER
-            </Col>
+            </DesktopOnly>
+            <MobileOnly>
+                <Select
+                    searchable={false}
+                    clearable={false}
+                    value={selectedPersonIndex}
+                    options={selectOptions}
+                    onChange={(option) => {onChange(option.value)}}
+                />
+            </MobileOnly>
         </div>
     )
 }

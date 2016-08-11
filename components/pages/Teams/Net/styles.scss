@@ -7,7 +7,7 @@ $net-color: $pale-blue;
 
   $net-width: 80px;
   $net-rows: 8;
-  $net-size: 25px;
+  $net-size: 26px;
   $net-line-width: 2px;
 
   .bottom-line {
@@ -73,6 +73,29 @@ $net-color: $pale-blue;
       display: inline-block;
       margin-left: 10px;
       font-weight: bold;
+    }
+  }
+
+  @media #{$xs-sm} {
+    .net-pole {
+      width: 5px;
+      right: ($net-width / 4) - $net-line-width;
+    }
+
+    .bottom-line {
+
+    }
+
+    .net-pattern {
+      width: ($net-width / 4);
+      height: ($net-rows * ($net-size) + $net-line-width);
+      background-image: linear-gradient($net-color $net-line-width, transparent $net-line-width),
+      linear-gradient(90deg, $net-color $net-line-width, transparent $net-line-width);
+      background-size: ($net-size / 2) ($net-size / 2), ($net-size / 2) ($net-size / 2);
+    }
+
+    .net-height-text {
+      display: none;
     }
   }
 }

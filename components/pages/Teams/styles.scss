@@ -28,4 +28,16 @@
   ul {
     padding: 0;
   }
+
+  @media #{$xs-sm} {
+    padding-top: 10px;
+
+    &:before {
+      display: none;
+    }
+
+    .team-list {
+      margin-top: 20px;
+    }
+  }
 }

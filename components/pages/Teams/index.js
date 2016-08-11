@@ -33,12 +33,11 @@ export default class TeamsPage extends React.Component {
                 <Grid fluid>
                     <Row>
                         <Net sizing={pickedTeamData.netSizing} >
-                            <Col xs={4} >
+                            <Col sm={4} xs={12} >
                                 <Row>
                                     <Col
                                         md={8} mdOffset={3}
                                         sm={11} smOffset={1}
-                                        xs={11} xsOffset={1}
                                     >
                                         <h3 className='page-headline'>Zespoły</h3>
                                         <ul className='team-list'>
@@ -54,16 +53,18 @@ export default class TeamsPage extends React.Component {
                                     </Col>
                                 </Row>
                             </Col>
-                            <Col xs={8} >
+                            <Col sm={8} xs={12}>
                                 <Grid fluid>
-                                    <Col sm={8} xs={12}>
-                                        <DateTimeHeader {...pickedTeamData}/>
-                                        <TeamDescription
-                                            headline={pickedTeamData.description.headline}
-                                            paragraph={pickedTeamData.description.paragraph}
-                                        >
-                                        </TeamDescription>
-                                    </Col>
+                                    <Row>
+                                        <Col sm={8} xs={12}>
+                                            <DateTimeHeader {...pickedTeamData}/>
+                                            <TeamDescription
+                                                headline={pickedTeamData.description.headline}
+                                                paragraph={pickedTeamData.description.paragraph}
+                                            >
+                                            </TeamDescription>
+                                        </Col>
+                                    </Row>
                                 </Grid>
                             </Col>
                         </Net>

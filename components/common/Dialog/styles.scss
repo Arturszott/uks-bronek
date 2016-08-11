@@ -2,7 +2,6 @@
 
 .dialog {
   @include font-headline();
-
   font-size: 36px;
   margin: 0 20px;
   margin-top: 50px;
@@ -16,7 +15,7 @@
     padding: 5px 15px;
     padding-left:40px;
     position: relative;
-    background: rgba(black, 0.2);
+    background: rgba(black, 0.4);
 
     strong {
       color: $red;
@@ -24,7 +23,6 @@
   }
 
   .dialog-part {
-
     .dialog-line-wrapper:first-child .dialog-line{
       &:before {
         content: '-';
@@ -32,6 +30,31 @@
         position: absolute;
         left: 10px;
       }
+    }
+  }
+
+  @media #{$xs-sm} {
+    font-size: 18px;
+
+    .dialog-part {
+      margin-bottom: 10px;
+      padding-left: 20px;
+
+      .dialog-line-wrapper:first-child .dialog-line{
+        &:before {
+          content: '-';
+          display: inline-block;
+          position: absolute;
+          left: -15px;
+        }
+      }
+    }
+    .dialog-line-wrapper {
+      display: inline-block;
+    }
+
+    .dialog-line {
+      padding: 0;
     }
   }
 }

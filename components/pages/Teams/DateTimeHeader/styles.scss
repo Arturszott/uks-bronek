@@ -1,7 +1,6 @@
 @import '~variables';
 
 .date-time-header {
-
   .days-line {
     @include font-headline;
 
@@ -34,5 +33,22 @@
     display: block;
     font-size: 16px;
     margin-top: 5px;
+  }
+
+  @media #{$xs-sm} {
+    .teamName {
+      display: none;
+    }
+
+    .days-line {
+      text-align: center;
+      &:after {
+        display: none;
+      }
+    }
+
+    .hours-field {
+      padding: 3px;
+    }
   }
 }

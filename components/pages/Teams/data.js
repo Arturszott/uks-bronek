@@ -47,7 +47,7 @@ const teams = [
         name: 'Juniorzy',
         age: '17-24',
         hours: '21:30 - 23:00',
-        days: 'Poniedziałki i Walentynki',
+        days: 'Poniedziałki i Wtorki',
         description: {
             headline: <span>Szkolna miłośc się skończyła? <br/>Miłość do siatkowki nie umiera nigdy.</span>,
             paragraph: 'W nastepnym etapie szkolenia zawodniczego oprocz rozwijania sprawnosci ogolnej wprowadza sie elementy sprawnosci specjalnej - techniki i taktyki gry. \n\n Na tym etapie szkolenia wprowadzamy zawodnikow do rywalizacji sportowej przystępując o rozgrywek ligowych w kategori młodzika.'

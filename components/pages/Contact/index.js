@@ -14,7 +14,7 @@ export default class ContactPage extends React.Component {
             <div className='contact-page page'>
                 <Grid >
                     <Row>
-                        <Col sm={6} class>
+                        <Col sm={6}>
                             <h1 className='main-headline'>
                                 Gdzie trenujemy
                             </h1>

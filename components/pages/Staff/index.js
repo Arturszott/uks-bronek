@@ -34,18 +34,14 @@ export default class StaffPage extends React.Component {
                 <Grid>
                     <Row>
                         <Col sm={8}>
-                            <Row>
-                                <h3>Kadra</h3>
-                            </Row>
-                            <Row>
-                                <StaffPicker
-                                    coaches={data}
-                                    selectedPersonIndex={selectedPersonIndex}
-                                    onClick={this.selectCoach.bind(this)}
-                                    onChange={this.selectCoach.bind(this)}
-                                />
-                                <CoachInfo {...coachData}/>
-                            </Row>
+                            <h3 className='page-headline'>Kadra</h3>
+                            <StaffPicker
+                                coaches={data}
+                                selectedPersonIndex={selectedPersonIndex}
+                                onClick={this.selectCoach.bind(this)}
+                                onChange={this.selectCoach.bind(this)}
+                            />
+                            <CoachInfo {...coachData}/>
                         </Col>
                         <Col sm={4}>
                             <CoachPhoto {...coachData}/>

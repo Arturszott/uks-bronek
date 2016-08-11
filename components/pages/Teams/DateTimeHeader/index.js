@@ -9,10 +9,10 @@ export default function DateTimeHeader({days, name, hours}) {
         <header className='date-time-header'>
             <Grid fluid>
                 <Row>
-                    <Col xs={8} className='days-line'>
+                    <Col xs={8} sm={7} className='days-line'>
                         <span className="days">{days}</span>
                     </Col>
-                    <Col xs={4}className='hours-field'>
+                    <Col xs={4} sm={5} className='hours-field'>
                         <span className="time">{hours}</span>
                     </Col>
                 </Row>

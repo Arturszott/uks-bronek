@@ -76,7 +76,7 @@ $net-color: $pale-blue;
     }
   }
 
-  @media #{$xs-sm} {
+  @include sm-max() {
     .net-pole {
       width: 5px;
       right: ($net-width / 4) - $net-line-width;

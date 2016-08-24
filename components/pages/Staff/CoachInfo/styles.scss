@@ -4,7 +4,7 @@
   position: relative;
   background: white;
 
-  @media #{$lg-min} {
+  @include lg-min() {
     &:before {
       display: block;
       content: '';

@@ -35,7 +35,7 @@
     margin-top: 5px;
   }
 
-  @media #{$xs-sm} {
+  @include sm-max() {
     .teamName {
       display: none;
     }

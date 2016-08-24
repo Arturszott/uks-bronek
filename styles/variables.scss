@@ -19,17 +19,31 @@ $large-screen: 'min-width: 1200px';
   font-family: 'Open Sans', sans-serif;
 }
 
-$xs-min: "only screen and (min-width:none)";
-$xs-max: "only screen and (max-width:520px)";
-$xs-sm: "only screen (min-width: none) and (max-width:767px)";
 
-$sm-min: "only screen and (min-width:768px)";
-$sm-max: "only screen and (max-width:991px)";
-$sm-md: "only screen (min-width: 768px) and (max-width:991px)";
+@mixin xs-max {
+  @media (max-width: 520px) {
+    @content;
+  }
+}
 
-$md-min: "only screen and (min-width:992px)";
-$md-max: "only screen and (max-width:1199px)";
-$md-lg: "only screen (min-width: 992px) and (max-width:1199px)";
+@mixin sm-max {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
 
-$lg-min: "only screen and (min-width:1200px)";
-$lg-max: "only screen and (max-width:none)";
+@mixin lg-min {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+$xs-max: "520px";
+
+$sm-min: "768px";
+$sm-max: "991px";
+
+$md-min: "992px";
+$md-max: "1199px";
+
+$lg-min: "1200px";

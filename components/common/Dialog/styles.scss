@@ -33,7 +33,7 @@
     }
   }
 
-  @media #{$xs-sm} {
+  @include sm-max() {
     font-size: 18px;
 
     .dialog-part {

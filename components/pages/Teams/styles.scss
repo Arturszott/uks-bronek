@@ -29,7 +29,7 @@
     padding: 0;
   }
 
-  @media #{$xs-sm} {
+  @include sm-max() {
     padding-top: 10px;
 
     &:before {

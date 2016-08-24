@@ -33,7 +33,7 @@ $large-screen: 'min-width: 1200px';
 }
 
 @mixin md-max {
-  @media (max-width: 1199px) {
+  @media (max-width: 992px) {
     @content;
   }
 }

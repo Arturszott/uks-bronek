@@ -6,4 +6,8 @@
   overflow: hidden;
   color: white;
   background-color: #00081e;
+
+  @include sm-max() {
+    padding-bottom: 50px;
+  }
 }

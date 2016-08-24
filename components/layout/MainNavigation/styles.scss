@@ -1,3 +1,5 @@
+@import "~variables";
+
 .main-navigation {
   background: rgba(6, 11, 39, 0.95);
   transition: all 400ms ease;
@@ -12,6 +14,23 @@
 
     .text {
       border-bottom: 2px solid #74c6ff;
+    }
+  }
+
+  .menu-button {
+    background: none;
+    border: 2px solid #085f81;
+    color: white;
+    outline: none;
+    margin-top: 12px;
+    @include font-headline();
+    
+    &:active {
+      background: white;
+      outline: none;
+      color: $blue;
+
+      border-color: $blue;
     }
   }
 }

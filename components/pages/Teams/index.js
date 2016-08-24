@@ -1,7 +1,7 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
 import { Link } from 'react-router'
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Grid, Row, Col, Glyphicon } from 'react-bootstrap';
 
 import TeamItem from './TeamItem';
 import DateTimeHeader from './DateTimeHeader';
@@ -12,17 +12,51 @@ import './styles.scss'
 
 import teamsData from './data';
 
+function renderTeamList(teamsData, showTeamInfo, pickedTeam, hideTeamList, isVisible) {
+    var visibilityClass = isVisible ? 'is-visible' : '';
+
+    return (
+        <div>
+            <ul className={`team-list ${visibilityClass}`}>
+                {teamsData.map((teamProps, i) => {
+                    return (
+                        <TeamItem key={i} {...teamProps}
+                                  active={pickedTeam === i}
+                                  onClick={() => {
+                                showTeamInfo(i);
+                                hideTeamList();
+                              }}
+                        />
+                    );
+                })}
+            </ul>
+            <div className={`team-list-backdrop ${visibilityClass}`} onClick={hideTeamList}>
+                <Glyphicon glyph="remove" className='icon-remove'/>
+            </div>
+        </div>
+    );
+}
+
 export default class TeamsPage extends React.Component {
     constructor() {
         super();
 
         this.state = {
-            pickedTeam: 1
+            pickedTeam: 1,
+            teamsPanelVisible: false
         }
     }
 
     showTeamInfo(i) {
         this.setState({ pickedTeam: i })
+    }
+
+    showTeamList() {
+        this.setState({ teamsPanelVisible: true })
+    }
+
+    hideTeamList() {
+        this.setState({ teamsPanelVisible: false })
     }
 
     render () {
@@ -39,17 +73,26 @@ export default class TeamsPage extends React.Component {
                                         md={8} mdOffset={3}
                                         sm={11} smOffset={1}
                                     >
-                                        <h3 className='page-headline'>Zespoły</h3>
-                                        <ul className='team-list'>
-                                            {teamsData.map((teamProps, i) => {
-                                                return (
-                                                    <TeamItem key={i} {...teamProps}
-                                                              active={this.state.pickedTeam === i}
-                                                              onClick={this.showTeamInfo.bind(this, i)}
-                                                    />
-                                                );
-                                            })}
-                                        </ul>
+                                        <h3 className='page-headline'>
+                                            Zespoły
+                                            <Glyphicon glyph="menu-down" className='icon-list'
+                                                       onClick={this.showTeamList.bind(this)}
+                                            />
+
+                                        </h3>
+
+                                        {
+                                            renderTeamList(
+                                                teamsData,
+                                                this.showTeamInfo.bind(this),
+                                                this.state.pickedTeam,
+                                                this.hideTeamList.bind(this),
+                                                this.state.teamsPanelVisible
+                                            )
+                                        }
+
+
+
                                     </Col>
                                 </Row>
                             </Col>
@@ -61,6 +104,7 @@ export default class TeamsPage extends React.Component {
                                             <TeamDescription
                                                 headline={pickedTeamData.description.headline}
                                                 paragraph={pickedTeamData.description.paragraph}
+                                                name={pickedTeamData.name}
                                             >
                                             </TeamDescription>
                                         </Col>

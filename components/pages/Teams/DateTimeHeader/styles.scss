@@ -37,11 +37,19 @@
 
   @include sm-max() {
     .teamName {
-      display: none;
+    }
+
+    .hours-field {
+      background: none;
+      width: auto;
+      display: inline-block;
+      color: $blue;
     }
 
     .days-line {
       text-align: center;
+      display: inline-block;
+      width: auto;
       &:after {
         display: none;
       }
@@ -49,6 +57,8 @@
 
     .hours-field {
       padding: 3px;
+      float: right;
+      margin-right: 10px;
     }
   }
 }

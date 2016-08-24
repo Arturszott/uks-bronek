@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import { Grid, Col, Row } from 'react-bootstrap';
+import { Grid, Col, Row, Button } from 'react-bootstrap';
 import { prefixLink } from 'gatsby-helpers'
 import Headroom from 'react-headroom'
 
@@ -47,6 +47,9 @@ export default class MainNavigation extends React.Component {
                                     <Col xs={6} xsHidden>
                                         {navigationLinks.staff}
                                     </Col>
+                                    <Col xs={12} mdHidden smHidden lgHidden>
+                                        <Button className='menu-button'>Menu</Button>
+                                    </Col>
                                 </Row>
                             </Col>
                             <Col xs={6} sm={4} className='text-center'>
@@ -59,6 +62,9 @@ export default class MainNavigation extends React.Component {
                                     </Col>
                                     <Col xs={6} xsHidden>
                                         {navigationLinks.contact}
+                                    </Col>
+                                    <Col xs={12} xsVisible mdHidden smHidden lgHidden>
+                                        <Button className='menu-button pull-right'>Kontakt</Button>
                                     </Col>
                                 </Row>
                             </Col>

@@ -29,15 +29,90 @@
     padding: 0;
   }
 
+  .team-list-backdrop {
+    opacity: 0;
+  }
+
+  .icon-list {
+    margin-left: 10px;
+    cursor: pointer;
+    position: relative;
+    top: 3px;
+    display: none;
+  }
+
   @include sm-max() {
     padding-top: 10px;
+    padding-bottom: 20px;
+
+    .icon-list {
+      display: inline-block;
+    }
+
+    .page-headline {
+      margin-left: 15px;
+      margin-bottom: 10px;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 300px;
+        margin-top: 10px;
+        border-bottom: 1px solid lighten($light-blue, 40%);
+      }
+    }
 
     &:before {
       display: none;
     }
 
+    .team-list, .team-list-backdrop {
+      position: fixed;
+      top: 0;
+      right: 0;
+
+      height: 100%;
+      margin-top: 0;
+    }
+
     .team-list {
-      margin-top: 20px;
+      width: 80%;
+      max-width: 260px;
+      padding: 20px;
+      z-index: 200;
+      background: white;
+      opacity: 0.3;
+
+      transform: translateX(100%);
+      transition: all 0.4s ease-in-out;
+
+      &.is-visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    .team-list-backdrop {
+      cursor: pointer;
+      width: 100%;
+      background: rgba($dark-blue, 0.8);
+      z-index: 199;
+      opacity: 0.3;
+      transform: translateX(100%);
+      transition: all 0.4s ease-in-out;
+
+      &.is-visible {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+
+      .icon-remove {
+        color: white;
+        float: left;
+        margin: 15px;
+        font-size: 26px;
+        pointer-events: none;
+      }
     }
   }
 }

@@ -4,7 +4,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 import './styles.scss'
 
-export default function DateTimeHeader({days, name, hours}) {
+export default function DateTimeHeader({days, hours}) {
     return (
         <header className='date-time-header'>
             <Grid fluid>
@@ -15,9 +15,6 @@ export default function DateTimeHeader({days, name, hours}) {
                     <Col xs={12} sm={5} className='hours-field'>
                         <span className="time">{hours}</span>
                     </Col>
-                </Row>
-                <Row>
-                    <span className="teamName">{name}</span>
                 </Row>
             </Grid>
         </header>

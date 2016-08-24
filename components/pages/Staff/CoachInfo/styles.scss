@@ -26,6 +26,10 @@
     h1 {
       font-size: 18px;
       margin-top: 20px;
+
+      @include sm-max() {
+        margin-top: 0px;
+      }
     }
 
     p {

@@ -48,6 +48,13 @@ $inactive-opacity: 0.3;
       background: $dark-blue;
       font-size:18px;
       border: none !important;
+      border-radius: 0;
+      height: 40px;
+
+      .Select-value {
+        font-size: 26px;
+        padding: 2px 0;
+      }
 
       .Select-value-label {
         color: white !important;
@@ -59,7 +66,6 @@ $inactive-opacity: 0.3;
     }
     .Select-arrow-zone {
       background: white;
-      border-radius: 3px;
       width: 40px;
       padding-right: 0;
     }
@@ -71,5 +77,9 @@ $inactive-opacity: 0.3;
       @include font-headline();
       font-size: 18px;
     }
+  }
+
+  @include sm-max() {
+    margin-bottom: 10px;
   }
 }

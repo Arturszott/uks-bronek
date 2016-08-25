@@ -19,10 +19,10 @@
 
   .menu-button {
     background: none;
-    border: 2px solid #085f81;
+    border: 1px solid #085f81;
     color: white;
     outline: none;
-    margin-top: 12px;
+    margin-top: 10px;
     @include font-headline();
     
     &:active {
@@ -35,11 +35,87 @@
   }
 }
 
+.mobile-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  max-width: 200px;
+  height: 100%;
+  padding: 20px;
+  padding-top: 40px;
+  z-index: 200;
+  font-family: 'Museo Slab', serif;
+  background: white;
+
+  opacity: 0.3;
+  transform: translateX(-100%);
+  transition: all 0.4s ease-in-out;
+
+  .list-item {
+    margin-bottom: 5px;
+    font-size: 18px;
+    padding-bottom: 5px;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      display: block;
+      margin-top: 5px;
+      border-bottom: 2px solid #74c6ff;
+      width: 20px;
+    }
+  }
+}
+
+.mobile-navigation-backdrop {
+  background: rgba($dark-blue, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 199;
+  position: fixed;
+
+  opacity: 0.3;
+  transform: translateX(-100%);
+  transition: all 0.4s ease-in-out;
+
+  .icon-remove {
+    color: white;
+    float: right;
+    margin: 15px;
+    font-size: 26px;
+    pointer-events: none;
+  }
+
+  &.is-expanded {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@include sm-max() {
+  .mobile-navigation {
+    &.is-expanded {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .mobile-navigation-backdrop {
+    &.is-expanded {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+
+
 .headroom {
   top: 60px;
   left: 0;
   right: 0;
   z-index: 100;
+  transition: all 200ms ease-in-out;
 }
 
 .headroom-wrapper {
@@ -47,11 +123,11 @@
 }
 
 .headroom--unfixed {
-  position: relative;
+  position: fixed;
   transform: translateY(0);
 }
 .headroom--scrolled {
-  transition: transform 200ms ease-in-out;
+
 
   .main-navigation {
     box-shadow: 0 -47px 35px 15px rgba(6, 11, 39, 0.88);
@@ -67,3 +143,15 @@
 }
 
 .headroom--pinned.headroom--scrolled {}
+
+.headroom--unpinned {
+  .logo {
+    transform: scaleX(0.8) scaleY(0.8) translateY(0%);
+  }
+}
+
+@include sm-max() {
+  .headroom--scrolled {
+    transform: translateY(-100%);
+  }
+}

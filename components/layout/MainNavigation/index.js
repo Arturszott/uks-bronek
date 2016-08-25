@@ -15,7 +15,7 @@ export default class MainNavigation extends React.Component {
         super();
 
         this.state = {
-            menuPanelVisible: true
+            menuPanelVisible: false
         }
     }
 

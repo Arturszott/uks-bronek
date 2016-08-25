@@ -29,14 +29,13 @@ export default class SupportersPage extends React.Component {
                                     <strong>ubiegać się o tytuł mistrza.</strong>
                                 </p>
                                 <p>
-                                    Dzięki gorącym okrzykom zawodnicy mają więcej odwagi <br/>
+                                    Dzięki gorącym okrzykom zawodnicy są bardziej zmotywowani by <br/>
                                     <strong>przyłożyć przeciwnikowi na boisku.</strong>
                                 </p>
                             </section>
                         </Col>
                     </Row>
                     <Row>
-
                         <div className="companies">
                             <h4 className='thanks'>Zawodników na boisku wspierają:</h4>
                             {supportersData.companies.map(({ name, imageUrl }, i) => {

@@ -36,4 +36,24 @@
     }
   }
 
+  @include sm-max() {
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+    .main-description {
+      margin-top: 30px;
+    }
+
+    .companies {
+      margin-top: 30px;
+
+      .company {
+        margin: 10px;
+        max-width: 90px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
